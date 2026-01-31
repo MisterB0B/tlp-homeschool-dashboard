@@ -1,12 +1,13 @@
 :root{
-  --bg:#0b0d14;
+  --bg:#07080D;
   --panel:#0f1220;
   --panel2:#10162a;
   --text:#eef0ff;
   --muted:#a7adc6;
   --line:rgba(255,255,255,.09);
-  --accent:#8b5cf6;
-  --accent2:#ff4fd8;
+  --accent:#8b5cf6;     /* neon purple */
+  --accent2:#ff4fd8;    /* neon pink */
+  --teal:#22D3EE;       /* neon teal */
   --shadow: 0 10px 40px rgba(0,0,0,.45);
 }
 

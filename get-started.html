@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get Started — Homeschool Dashboard</title>
+  <meta name="theme-color" content="#07080D" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="brand-title">Homeschool Dashboard</div>
+        <div class="brand-sub">Get started</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a class="navlink" href="index.html">Dashboard</a>
+      <a class="navlink active" href="get-started.html">Get Started</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="hero">
+        <div class="hero-copy">
+          <h1>Welcome, Gnomies-in-training</h1>
+          <p class="muted">Let’s set this up in ~2 minutes. You can change anything later.</p>
+          <div class="chips">
+            <span class="chip">Black + neon purple</span>
+            <span class="chip teal">Teal glow</span>
+            <span class="chip">No login</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <!-- “AI-ish” modern abstract art via inline SVG (no external assets) -->
+          <svg viewBox="0 0 420 260" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="g1" cx="30%" cy="20%" r="70%">
+                <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.75"/>
+                <stop offset="60%" stop-color="#8B5CF6" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="g2" cx="80%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.65"/>
+                <stop offset="55%" stop-color="#22D3EE" stop-opacity="0.10"/>
+                <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="stroke" x1="0" x2="1">
+                <stop offset="0%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#FF4FD8"/>
+              </linearGradient>
+            </defs>
+
+            <rect x="0" y="0" width="420" height="260" rx="22" fill="rgba(16,22,42,0.55)" stroke="rgba(255,255,255,0.10)"/>
+            <circle cx="130" cy="70" r="120" fill="url(#g1)"/>
+            <circle cx="320" cy="90" r="120" fill="url(#g2)"/>
+
+            <path d="M60 190 C120 140, 190 220, 260 170 S380 170, 390 210" fill="none" stroke="url(#stroke)" stroke-width="6" stroke-linecap="round" opacity="0.85"/>
+            <path d="M70 210 C150 160, 220 235, 300 190 S385 190, 400 230" fill="none" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+            <!-- simple “character badge” -->
+            <g transform="translate(275 120)">
+              <circle cx="55" cy="55" r="46" fill="rgba(11,13,20,0.45)" stroke="rgba(139,92,246,0.55)"/>
+              <circle cx="42" cy="50" r="6" fill="#EDEFF7"/>
+              <circle cx="68" cy="50" r="6" fill="#EDEFF7"/>
+              <path d="M40 73 Q55 86 70 73" fill="none" stroke="#EDEFF7" stroke-width="4" stroke-linecap="round"/>
+              <path d="M30 36 Q55 20 80 36" fill="none" stroke="#FF4FD8" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="panel-inner" style="margin-top:16px">
+        <h2 class="h2">1) Student</h2>
+        <div class="row">
+          <div class="grow">
+            <div class="label">Child’s name</div>
+            <input id="childName" class="input" placeholder="Emma" />
+          </div>
+          <div class="grow">
+            <div class="label">Grade</div>
+            <select id="grade" class="input">
+              <option value="5" selected>5th grade</option>
+              <option value="4">4th grade</option>
+              <option value="6">6th grade</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-inner" style="margin-top:16px">
+        <h2 class="h2">2) Level band</h2>
+        <p class="muted" style="margin-top:0">Used for default subject targets. You can customize subject-by-subject later.</p>
+        <div class="grid">
+          <button class="card pick" data-band="prek-k">
+            <div class="card-title">Pre‑K / K</div>
+            <div class="card-sub">Short blocks, phonics, play-based learning</div>
+          </button>
+          <button class="card pick" data-band="1-4">
+            <div class="card-title">1st–4th</div>
+            <div class="card-sub">Read daily, basic composition, foundational math</div>
+          </button>
+          <button class="card pick selected" data-band="5-8">
+            <div class="card-title">5th–8th</div>
+            <div class="card-sub">Deeper comprehension, multi-step math, projects</div>
+          </button>
+          <button class="card pick" data-band="hs">
+            <div class="card-title">High School</div>
+            <div class="card-sub">Credits, transcripts, long-term planning</div>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel-inner" style="margin-top:16px">
+        <h2 class="h2">3) Daily rhythm</h2>
+        <div class="row">
+          <div class="grow">
+            <div class="label">Time per day</div>
+            <select id="hours" class="input">
+              <option value="2-3">2–3 hours</option>
+              <option value="3-4" selected>3–4 hours</option>
+              <option value="4-5">4–5 hours</option>
+            </select>
+          </div>
+          <div class="grow">
+            <div class="label">Days per week</div>
+            <select id="days" class="input">
+              <option value="4">4</option>
+              <option value="5" selected>5</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:16px">
+        <button id="btnSave" class="btn">Save & open dashboard</button>
+        <a class="btn ghost" href="index.html">Skip</a>
+      </div>
+
+      <p class="muted" style="margin-top:14px">Privacy note: This prototype stores settings locally on this device (no accounts, no tracking).</p>
+    </section>
+  </main>
+
+  <script>
+    const LS_SETTINGS = 'hs_settings_v1';
+
+    const $ = (s) => document.querySelector(s);
+    const $$ = (s) => Array.from(document.querySelectorAll(s));
+
+    function loadSettings(){
+      try{ return JSON.parse(localStorage.getItem(LS_SETTINGS) || '{}'); }
+      catch{ return {}; }
+    }
+
+    function saveSettings(patch){
+      const cur = loadSettings();
+      const next = { ...cur, ...patch };
+      localStorage.setItem(LS_SETTINGS, JSON.stringify(next));
+      return next;
+    }
+
+    // restore
+    const cur = loadSettings();
+    $('#childName').value = cur.studentName || 'Emma';
+    $('#grade').value = cur.grade || '5';
+    $('#hours').value = cur.timeTarget || '3-4';
+    $('#days').value = cur.daysPerWeek || '5';
+
+    let band = cur.levelBand || '5-8';
+    function setBand(v){
+      band = v;
+      $$('.pick').forEach(b => b.classList.toggle('selected', b.dataset.band === v));
+    }
+    setBand(band);
+
+    $$('.pick').forEach(btn => btn.addEventListener('click', () => setBand(btn.dataset.band)));
+
+    $('#btnSave').addEventListener('click', () => {
+      saveSettings({
+        studentName: $('#childName').value.trim() || 'Student',
+        grade: $('#grade').value,
+        levelBand: band,
+        timeTarget: $('#hours').value,
+        daysPerWeek: $('#days').value,
+      });
+      window.location.href = 'index.html#week';
+    });
+  </script>
+</body>
+</html>
