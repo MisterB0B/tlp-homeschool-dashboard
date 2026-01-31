@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Homeschool Dashboard — 5th Grade</title>
+  <meta name="theme-color" content="#0B0D14" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="brand-title">Homeschool Dashboard</div>
+        <div class="brand-sub">5th grade · College Station</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a class="navlink active" href="#week">This Week</a>
+      <a class="navlink" href="#subjects">Subjects</a>
+      <a class="navlink" href="#settings">Settings</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="week" class="panel">
+      <div class="row between">
+        <div>
+          <h1>This Week</h1>
+          <p class="muted">Simple plan + checkboxes. Everything saves in your browser automatically.</p>
+        </div>
+        <div class="row">
+          <button id="btnReset" class="btn ghost" title="Clear checkmarks for a fresh week">Reset week</button>
+          <button id="btnPrint" class="btn">Print</button>
+        </div>
+      </div>
+
+      <div id="weekGrid" class="week-grid"></div>
+
+      <div class="panel-inner" style="margin-top:16px">
+        <h2 class="h2">Notes for the week</h2>
+        <textarea id="notes" class="textarea" rows="5" placeholder="Wins, struggles, what to adjust…"></textarea>
+      </div>
+    </section>
+
+    <section id="subjects" class="panel">
+      <h1>Subjects (what we’re covering)</h1>
+      <div id="subjectCards" class="grid"></div>
+      <div class="panel-inner" style="margin-top:16px">
+        <h2 class="h2">How to use this</h2>
+        <ul>
+          <li>Keep blocks short (20–30 min) and take movement breaks.</li>
+          <li>Reading + writing daily is the biggest lever.</li>
+          <li>Math: focus on mastery over speed.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="settings" class="panel">
+      <h1>Settings</h1>
+      <div class="panel-inner">
+        <div class="row">
+          <div class="grow">
+            <div class="label">Student name (optional)</div>
+            <input id="studentName" class="input" placeholder="Student" />
+          </div>
+          <div class="grow">
+            <div class="label">Start of week</div>
+            <input id="weekOf" class="input" type="date" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="grow">
+            <div class="label">Daily time target</div>
+            <select id="timeTarget" class="input">
+              <option value="2-3">2–3 hours</option>
+              <option value="3-4" selected>3–4 hours</option>
+              <option value="4-5">4–5 hours</option>
+            </select>
+          </div>
+          <div class="grow">
+            <div class="label">Style</div>
+            <select id="style" class="input">
+              <option value="simple" selected>Simple</option>
+              <option value="more">More structured</option>
+            </select>
+          </div>
+        </div>
+        <p class="muted">This is a starting template. Tell Bob what you want (subjects, pace, resources) and we’ll customize.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="muted">v0.1 — built for Elle (5th grade) · saves locally · no accounts</div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
