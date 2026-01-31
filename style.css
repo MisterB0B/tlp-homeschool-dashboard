@@ -79,7 +79,7 @@ h1{margin:0 0 4px 0; font-size:22px}
   border-radius:12px;
   font-weight:700;
 }
-.btn:hover{border-color:rgba(255,79,216,.45)}
+.btn:hover{border-color:rgba(34,211,238,.55)}
 .btn.ghost{background:transparent; border-color:rgba(255,255,255,.14); color:var(--muted)}
 
 .input, .textarea{
@@ -102,6 +102,24 @@ h1{margin:0 0 4px 0; font-size:22px}
 }
 .card-title{font-weight:800; margin-bottom:6px}
 .card-sub{color:var(--muted); font-size:13px; line-height:1.35}
+
+/* onboarding */
+.hero{display:grid; grid-template-columns:1.1fr .9fr; gap:14px; align-items:stretch}
+@media (max-width: 900px){.hero{grid-template-columns:1fr}}
+.hero-art{min-height:220px}
+.chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+.chip{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:6px 10px; border-radius:999px;
+  border:1px solid rgba(139,92,246,.35);
+  background:rgba(139,92,246,.10);
+  color:var(--text);
+  font-size:12px;
+}
+.chip.teal{border-color:rgba(34,211,238,.35); background:rgba(34,211,238,.08)}
+
+.pick{cursor:pointer; text-align:left}
+.pick.selected{border-color:rgba(34,211,238,.45); box-shadow:0 0 0 1px rgba(34,211,238,.10), 0 0 28px rgba(34,211,238,.12)}
 
 .week-grid{display:grid; grid-template-columns:repeat(5, 1fr); gap:12px}
 @media (max-width: 900px){ .week-grid{grid-template-columns:1fr} }
