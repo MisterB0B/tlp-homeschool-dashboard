@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Records — Homeschool Dashboard</title>
+  <meta name="theme-color" content="#07080D" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div class="brand-title">Homeschool Dashboard</div>
+        <div class="brand-sub">Records</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a class="navlink" href="get-started.html">Get Started</a>
+      <a class="navlink" href="index.html#week">This Week</a>
+      <a class="navlink" href="texas.html">Texas</a>
+      <a class="navlink active" href="records.html">Records</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h1>Records (lightweight)</h1>
+      <p class="muted">Optional in Texas, but helpful. Keep it simple: what you used + a few samples.</p>
+
+      <div class="panel-inner">
+        <h2 class="h2">Curriculum & materials used</h2>
+        <p class="muted" style="margin-top:0">List the main resources (books, workbooks, online programs).</p>
+        <textarea id="materials" class="textarea" rows="6" placeholder="Math: …\nReading: …\nSpelling/Grammar: …\nGood citizenship: …"></textarea>
+      </div>
+
+      <div class="panel-inner" style="margin-top:16px">
+        <h2 class="h2">Reading list</h2>
+        <textarea id="reading" class="textarea" rows="6" placeholder="Book titles + dates…"></textarea>
+      </div>
+
+      <div class="panel-inner" style="margin-top:16px">
+        <h2 class="h2">Monthly notes / highlights</h2>
+        <textarea id="highlights" class="textarea" rows="6" placeholder="What improved? What was hard? Any wins?"></textarea>
+      </div>
+
+      <div class="row" style="margin-top:16px">
+        <button id="btnExport" class="btn">Export (copy to clipboard)</button>
+        <button id="btnPrint" class="btn ghost">Print</button>
+      </div>
+
+      <pre id="exportOut" class="codeblock" style="margin-top:12px; display:none"></pre>
+    </section>
+  </main>
+
+  <script src="records.js"></script>
+</body>
+</html>
